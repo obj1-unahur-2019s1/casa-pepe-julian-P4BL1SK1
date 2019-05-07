@@ -15,7 +15,7 @@ object casaDePepeYJulian {
 	}
 	method compraMasCara(){
 		return cosas.max({cosa=>cosa.precio()})
-	}
+	    }
 	method electrodomesticosComprados(){
 		return cosas.filter({cosa=>cosa.esElectrodomestico()})
 	}
@@ -23,7 +23,7 @@ object casaDePepeYJulian {
 		return cosas.count({cosa=>cosa.esComida()})<2
 	}
 	method queFaltaComprar(){
-		return cosas.difference(lista)
+		return lista.asSet().difference(cosas)
 	}
 }
 
